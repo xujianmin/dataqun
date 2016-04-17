@@ -1,10 +1,12 @@
-= simple_form_for(@profile) do |f|
+= simple_form_for @profile, html: { class: 'form-horizontal' },
+  wrapper: :horizontal_form do |f|
   = f.error_notification
 
   .form-inputs
-    = f.input :ref
-    = f.input :name
-    = f.input :gender
+    = f.input :ref, input_html: { value: @key }, hint: "系统生成，请勿修改", disabled: true
+    = f.hidden_field :ref, value: @key
+    = f.input :last_name
+    = f.input :first_name
     = f.input :id_num
     = f.input :id_type
     = f.input :occupation
@@ -14,7 +16,7 @@
     = f.input :province
     = f.input :city
     = f.input :address
-    = f.input :post_code
+    = f.input :zipcode
     = f.input :cellphone
     = f.input :telphone
 

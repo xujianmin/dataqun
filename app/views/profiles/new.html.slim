@@ -1,5 +1,32 @@
-h1 New profile
+.col-lg-8
+  h4 新建档案
+  hr
+  = simple_form_for @profile, html: { class: 'form-horizontal' },
+    wrapper: :horizontal_form do |f|
+    = f.error_notification
 
-== render 'form'
+    .form-inputs
+      = f.input :ref, input_html: { value: @key }, disabled: true
+      = f.hidden_field :ref, value: @key
 
-= link_to 'Back', profiles_path
+      = f.input :last_name
+      = f.input :first_name
+      = f.input :id_num
+      = f.input :id_type
+      = f.input :occupation
+      = f.input :employer
+      = f.input :position
+      = f.input :country, input_html: { value: "中国" }
+      = f.input :province, input_html: {value: "四川" }
+      = f.input :city, input_html: { value: "成都" }
+      = f.input :address
+      = f.input :zipcode
+      = f.input :cellphone
+      = f.input :telphone
+
+    .form-actions
+      = f.button :submit
+
+  = link_to 'Back', profiles_path
+.col-lg-4
+  .well

@@ -26,7 +26,7 @@ table
     - @profiles.each do |profile|
       tr
         td = profile.ref
-        td = profile.name
+        td = profile.last_name
         td = profile.gender
         td = profile.id_num
         td = profile.id_type
@@ -37,7 +37,7 @@ table
         td = profile.province
         td = profile.city
         td = profile.address
-        td = profile.post_code
+        td = profile.zipcode
         td = profile.cellphone
         td = profile.telphone
         td = link_to 'Show', profile

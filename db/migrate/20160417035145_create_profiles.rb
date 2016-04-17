@@ -2,7 +2,8 @@ class CreateProfiles < ActiveRecord::Migration
   def change
     create_table :profiles do |t|
       t.string :ref
-      t.string :name
+      t.string :first_name
+      t.string :last_name
       t.boolean :gender
       t.string :id_num
       t.string :id_type
@@ -13,7 +14,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :province
       t.string :city
       t.string :address
-      t.string :post_code
+      t.string :zipcode
       t.string :cellphone
       t.string :telphone
 

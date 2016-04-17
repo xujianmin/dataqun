@@ -15,6 +15,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/new
   def new
     @profile = Profile.new
+    @key = Profile.generate_key
   end
 
   # GET /profiles/1/edit
@@ -69,6 +70,8 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:ref, :name, :gender, :id_num, :id_type, :occupation, :employer, :position, :country, :province, :city, :address, :post_code, :cellphone, :telphone)
+      params.require(:profile).permit(:ref, :first_name, :last_name, :gender, :id_num,
+                                      :id_type, :occupation, :employer, :position, :country,
+                                      :province, :city, :address, :zipcode, :cellphone, :telphone)
     end
 end

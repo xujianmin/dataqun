@@ -30,6 +30,9 @@ gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'country_select'
 
+# i18n国际化语言
+gem 'rails-i18n', '~> 4.0.0' # Rails 4.0
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

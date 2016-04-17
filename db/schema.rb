@@ -15,7 +15,8 @@ ActiveRecord::Schema.define(version: 20160417035145) do
 
   create_table "profiles", force: :cascade do |t|
     t.string   "ref",        limit: 255
-    t.string   "name",       limit: 255
+    t.string   "first_name", limit: 255
+    t.string   "last_name",  limit: 255
     t.boolean  "gender"
     t.string   "id_num",     limit: 255
     t.string   "id_type",    limit: 255
@@ -26,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160417035145) do
     t.string   "province",   limit: 255
     t.string   "city",       limit: 255
     t.string   "address",    limit: 255
-    t.string   "post_code",  limit: 255
+    t.string   "zipcode",    limit: 255
     t.string   "cellphone",  limit: 255
     t.string   "telphone",   limit: 255
     t.datetime "created_at",             null: false

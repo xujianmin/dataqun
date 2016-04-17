@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :wechat do
+  get 'board/index'
+  end
+
   resources :profiles
   resources :profiles
   # The priority is based upon order of creation: first created -> highest priority.
