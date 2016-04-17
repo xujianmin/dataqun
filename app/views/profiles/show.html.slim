@@ -1,0 +1,51 @@
+p#notice = notice
+
+p
+  strong Ref:
+  = @profile.ref
+p
+  strong Name:
+  = @profile.name
+p
+  strong Gender:
+  = @profile.gender
+p
+  strong Id num:
+  = @profile.id_num
+p
+  strong Id type:
+  = @profile.id_type
+p
+  strong Occupation:
+  = @profile.occupation
+p
+  strong Employer:
+  = @profile.employer
+p
+  strong Position:
+  = @profile.position
+p
+  strong Country:
+  = @profile.country
+p
+  strong Province:
+  = @profile.province
+p
+  strong City:
+  = @profile.city
+p
+  strong Address:
+  = @profile.address
+p
+  strong Post code:
+  = @profile.post_code
+p
+  strong Cellphone:
+  = @profile.cellphone
+p
+  strong Telphone:
+  = @profile.telphone
+
+= link_to 'Edit', edit_profile_path(@profile)
+'|
+= link_to 'Back', profiles_path

@@ -1,0 +1,49 @@
+h1 Listing profiles
+
+table
+  thead
+    tr
+      th Ref
+      th Name
+      th Gender
+      th Id num
+      th Id type
+      th Occupation
+      th Employer
+      th Position
+      th Country
+      th Province
+      th City
+      th Address
+      th Post code
+      th Cellphone
+      th Telphone
+      th
+      th
+      th
+
+  tbody
+    - @profiles.each do |profile|
+      tr
+        td = profile.ref
+        td = profile.name
+        td = profile.gender
+        td = profile.id_num
+        td = profile.id_type
+        td = profile.occupation
+        td = profile.employer
+        td = profile.position
+        td = profile.country
+        td = profile.province
+        td = profile.city
+        td = profile.address
+        td = profile.post_code
+        td = profile.cellphone
+        td = profile.telphone
+        td = link_to 'Show', profile
+        td = link_to 'Edit', edit_profile_path(profile)
+        td = link_to 'Destroy', profile, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Profile', new_profile_path
